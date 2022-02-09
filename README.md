@@ -3,6 +3,7 @@ My implementation of printf according to 42 standarts.<br />
 
 You can compile it using "Make" command,<br />
 after that you can do : gcc <yourfilename.c> libftprintf.a<br />
+
 The prototype of ft_printf() is:<br />
   int ft_printf(const char *, ...);<br />
 
