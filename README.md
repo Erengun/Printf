@@ -19,3 +19,6 @@ My function can handle the following conversions: cspdiuxX%<br />
 • %x : Prints a number in hexadecimal (base 16) lowercase format.<br />
 • %X : Prints a number in hexadecimal (base 16) uppercase format.<br />
 • %% : Prints a percent sign.<br />
+
+News
+-Added color support now you can print colorful texts for more(https://42resources.github.io/2022/02/17/cde-renkli-terminaller)
