@@ -6,7 +6,7 @@
 /*   By: egun <egun@student.42istanbul.com.tr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:33:01 by egun              #+#    #+#             */
-/*   Updated: 2022/02/08 16:40:54 by egun             ###   ########.fr       */
+/*   Updated: 2022/03/06 16:29:43 by egun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 # include <stdlib.h>
+# include "colors.h"
 
 int		ft_printf(const char *key, ...);
 
