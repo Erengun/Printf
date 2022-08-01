@@ -21,7 +21,7 @@ int	ft_putstr(char *str, int flag)
 
 	fd = flag;
 	if (!str)
-		return (ft_putstr("(null)"));
+		return (ft_putstr("(null)", 1));
 	mem = str;
 	while (*str)
 		write(fd, str++, 1);
