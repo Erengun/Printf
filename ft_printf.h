@@ -24,7 +24,7 @@ int		ft_printf(const char *key, ...);
 
 int		arg_printer(char c, va_list macro);
 
-int		ft_putstr(char *c);
+int		ft_putstr(char *c, int flag);
 
 int		ft_putpointer(unsigned long int point);
 

@@ -6,7 +6,7 @@
 /*   By: egun <egun@student.42istanbul.com.tr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 16:24:32 by egun              #+#    #+#             */
-/*   Updated: 2022/02/09 18:59:05 by egun             ###   ########.fr       */
+/*   Updated: 2022/08/01 19:01:03 by egun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	ft_putstr(char *str)
+int	ft_putstr(char *str, int flag)
 {
 	char	*mem;
+	int		fd;
 
+	fd = flag;
 	if (!str)
 		return (ft_putstr("(null)"));
 	mem = str;
 	while (*str)
-		write(1, str++, 1);
+		write(fd, str++, 1);
 	return (str - mem);
 }
 
@@ -33,8 +35,8 @@ int	ft_putpointer(unsigned long int point)
 	int		leng;
 
 	if (point == 0)
-		return (ft_putstr("0x0"));
-	leng = ft_putstr("0x");
+		return (ft_putstr("0x0", 1));
+	leng = ft_putstr("0x", 1);
 	ft_bzero(str, 16);
 	i = 0;
 	while (point)
@@ -54,7 +56,7 @@ int	ft_puthex(unsigned int point, char *charset)
 	int		leng;
 
 	if (point == 0)
-		return (ft_putstr("0"));
+		return (ft_putstr("0", 1));
 	ft_bzero(str, 16);
 	i = 0;
 	leng = 0;
@@ -76,7 +78,7 @@ int	ft_putnbr(int nb)
 
 	len = 0;
 	num = ft_itoa(nb);
-	len += ft_putstr(num);
+	len += ft_putstr(num, 1);
 	free(num);
 	return (len);
 }

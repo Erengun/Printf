@@ -22,7 +22,9 @@ int	arg_printer(char c, va_list macro)
 		return (write(1, &erochar, 1));
 	}
 	if (c == 's')
-		return (ft_putstr(va_arg(macro, char *)));
+		return (ft_putstr(va_arg(macro, char *), 1));
+	if (c == 'e')
+		return (ft_putstr(va_arg(macro, char *), 2));
 	if (c == 'p')
 		return (ft_putpointer(va_arg(macro, unsigned long int)));
 	if (c == 'd' || c == 'i')
@@ -34,7 +36,7 @@ int	arg_printer(char c, va_list macro)
 	if (c == 'X')
 		return (ft_puthex(va_arg(macro, unsigned int), "0123456789ABCDEF"));
 	if (c == '%')
-		return (ft_putstr("%"));
+		return (ft_putstr("%", 1));
 	return (0);
 }
 
