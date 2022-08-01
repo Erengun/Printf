@@ -14,12 +14,10 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	ft_putstr(char *str, int flag)
+int	ft_putstr(char *str, int fd)
 {
 	char	*mem;
-	int		fd;
 
-	fd = flag;
 	if (!str)
 		return (ft_putstr("(null)", 1));
 	mem = str;
